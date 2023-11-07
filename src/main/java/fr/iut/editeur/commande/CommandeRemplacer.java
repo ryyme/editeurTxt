@@ -9,13 +9,18 @@ public class CommandeRemplacer extends CommandeDocument{
 
     @Override
     public void executer(){
-        if(parameters.length < 4) {
+        if(parameters.length < 3) {
             System.err.println("Format remplacer;depart;fin;chaine");
             return;
         }
         int debut = Integer.parseInt(parameters[1]);
         int fin = Integer.parseInt(parameters[2]);
-        String texte = parameters[3];
+        String texte = " ";
+        if(parameters.length > 3) {
+            texte += parameters[3];
+        }
+
+
 
         this.document.remplacer(debut,fin,texte);
         super.executer();
