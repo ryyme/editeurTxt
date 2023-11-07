@@ -1,5 +1,7 @@
 package fr.iut.editeur.document;
 
+import java.util.Locale;
+
 public class Document {
 
     private String texte;
@@ -29,5 +31,10 @@ public class Document {
         String leftPart = texte.substring(0, start);
         String rightPart = texte.substring(end);
         texte = leftPart + remplacement + rightPart;
+    }
+    public void majuscules(int start, int end) {
+        String morceau = texte.substring(start,end);
+        String maj = morceau.toUpperCase();
+        remplacer(start,end,maj);
     }
 }
