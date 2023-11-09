@@ -11,7 +11,7 @@ public class CommandeClear extends CommandeDocument{
     public void executer(){
 
         int debut = 0;
-        int fin = document.getTexte().length();
+        int fin = document.getContentDocument().length();
         String texte = " ";
 
 

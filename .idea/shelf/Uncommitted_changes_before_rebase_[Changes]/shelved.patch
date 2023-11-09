@@ -1,0 +1,18 @@
+Index: src/main/java/fr/iut/editeur/commande/CommandeMajuscules.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package fr.iut.editeur.commande;\n\nimport fr.iut.editeur.document.Document;\n\npublic class CommandeMajuscules extends CommandeDocument {\n    public CommandeMajuscules(Document document, String[] parameters) {\n        super(document, parameters);\n    }\n\n    @Override\n    public void executer() {\n        if(parameters.length < 3) {\n            System.err.println(\"Format attendu : majuscules;depart;fin\");\n            return;\n        }\n        int debut = Integer.parseInt(parameters[1]);\n        int fin = Integer.parseInt(parameters[2]);\n        this.document.majuscules(debut, fin);\n        super.executer();\n    }\n\n    //minuscule\n    public void minuscule(int debut, int fin) {\n        String texte = this.document.getTexte();\n        String texteMinuscule = texte.substring(debut, fin).toLowerCase();\n        this.document.remplacer(debut, fin, texteMinuscule);\n    }\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/fr/iut/editeur/commande/CommandeMajuscules.java b/src/main/java/fr/iut/editeur/commande/CommandeMajuscules.java
+--- a/src/main/java/fr/iut/editeur/commande/CommandeMajuscules.java	(revision ad3cf01cd0261782ccac7710fc2fd04936bdc63d)
++++ b/src/main/java/fr/iut/editeur/commande/CommandeMajuscules.java	(date 1699538528457)
+@@ -19,7 +19,6 @@
+         super.executer();
+     }
+ 
+-    //minuscule
+     public void minuscule(int debut, int fin) {
+         String texte = this.document.getTexte();
+         String texteMinuscule = texte.substring(debut, fin).toLowerCase();

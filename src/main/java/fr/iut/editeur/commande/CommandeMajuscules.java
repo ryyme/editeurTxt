@@ -21,7 +21,7 @@ public class CommandeMajuscules extends CommandeDocument {
 
     //minuscule
     public void minuscule(int debut, int fin) {
-        String texte = this.document.getTexte();
+        String texte = this.document.getContentDocument();
         String texteMinuscule = texte.substring(debut, fin).toLowerCase();
         this.document.remplacer(debut, fin, texteMinuscule);
     }
