@@ -41,4 +41,4 @@ public class Document {
         // Ajoutez ici votre bug intentionnel, par exemple ajouter une lettre.
         contentDocument += "a"; // Bug intentionnel
     }
-}
+}  // contentDocument changer
