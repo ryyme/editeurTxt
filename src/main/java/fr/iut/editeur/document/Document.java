@@ -37,4 +37,10 @@ public class Document {
         String maj = morceau.toUpperCase();
         remplacer(start,end,maj);
     }
+
+    public void clear() {
+        texte = ""; // Efface tout le texte
+        // Ajoutez ici votre bug intentionnel, par exemple ajouter une lettre.
+        texte += "a"; // Bug intentionnel
+    }
 }
