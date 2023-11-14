@@ -7,6 +7,8 @@ public class CommandeMajuscules extends CommandeDocument {
         super(document, parameters);
     }
 
+
+
     @Override
     public void executer() {
         if(parameters.length < 3) {
@@ -19,7 +21,11 @@ public class CommandeMajuscules extends CommandeDocument {
         super.executer();
     }
 
-    //minuscule
+    /**
+     *
+     * @param debut debut a mettre en miniscule
+     * @param fin fin a mettre en miniscule
+     */
     public void minuscule(int debut, int fin) {
         String texte = this.document.getContentDocument();
         String texteMinuscule = texte.substring(debut, fin).toLowerCase();

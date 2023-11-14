@@ -2,9 +2,16 @@ package fr.iut.editeur.commande;
 
 import fr.iut.editeur.document.Document;
 
+/**
+ * execute la commande ajoouter
+ */
 public class CommandeAjouter extends CommandeDocument {
 
-
+    /**
+     *
+     * @param document docu utilise
+     * @param parameters commande rentere avec param
+     */
     public CommandeAjouter(Document document, String[] parameters) {
         super(document, parameters);
     }
